@@ -178,6 +178,7 @@
 /sys/devices(/soc\.0)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/name                  u:object_r:sysfs_rmt_storage:s0
 /sys/devices(/soc\.0)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/version               u:object_r:sysfs_rmt_storage:s0
 /sys/devices(/soc\.0)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/maps/map0(/.*)?       u:object_r:sysfs_rmt_storage:s0
+/sys/kernel/debug/rmt_storage(/.*)?                                                      u:object_r:debugfs_rmt_storage:s0
 
 # Subsystem
 /sys/devices(/soc\.0)?/(fe200000|c200000)\.qcom,lpass/subsys1/name                       u:object_r:sysfs_subsys:s0
@@ -198,6 +199,7 @@
 # USB & Power
 /sys/devices/msm_dwc3/power_supply/usb/type                                              u:object_r:sysfs_usb_supply:s0
 /sys/devices/msm_dwc3/power_supply/usb/device                                            u:object_r:sysfs_usb_supply:s0
+/sys/devices/00-qcom,charger/power_supply/battery/capacity                               u:object_r:sysfs_batteryinfo:s0
 
 # Video
 /sys/devices(/soc\.0)?/fd8c0000\.qcom,msm-cam/video4linux/video0/name                    u:object_r:sysfs_video:s0
@@ -219,6 +221,7 @@
 /data/misc/fm(/.*)?                                                 u:object_r:fm_data_file:s0
 /data/audio/acdbdata(/.*)?                                          u:object_r:acdb_data_file:s0
 /data/etc(/.*)?                                                     u:object_r:addrsetup_data_file:s0
+/data/time(/.*)?                                                    u:object_r:timekeep_data_file:s0
 
 ###################################
 # persist files
